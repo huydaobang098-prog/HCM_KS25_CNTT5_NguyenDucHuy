@@ -29,21 +29,22 @@ VALUES
 
 SELECT * FROM shopmanager.products;
 
-UPDATE Products
-SET price = 26000000
-WHERE product_name = 'iPhone 15';
+UPDATE Products SET price = 26000000 WHERE product_name = 'iPhone 15';
 
-UPDATE Products
-SET stock = stock + 10
-WHERE category_id = 1;
+UPDATE Products SET stock = stock + 10 WHERE category_id = 1;
 
-DELETE FROM Products
-WHERE product_id = 4;
+DELETE FROM Products WHERE product_id = 4;
 
-DELETE FROM Products
-WHERE price < 1000000;
+DELETE FROM Products WHERE price < 1000000;
 
 SELECT * FROM Products;
 
-SELECT * FROM Products
-WHERE stock > 15;
+SELECT * FROM Products WHERE stock > 15;
+
+SELECT * FROM Products WHERE stock > 15;
+
+SELECT * FROM Products WHERE price BETWEEN 1000000 AND 25000000;
+
+SELECT * FROM Products WHERE NOT product_name = 'iPhone 15' AND stock > 0;
+
+SELECT * FROM Products WHERE NOT category_id = 1 AND price > 500000;
